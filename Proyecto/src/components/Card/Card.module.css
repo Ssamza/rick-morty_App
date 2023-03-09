@@ -1,0 +1,35 @@
+.container{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.413) ;
+    width: fit-content;
+    padding: 1em;
+    margin: 20px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 18px 15px rgb(127, 255, 92);
+    justify-content: center;
+    font-family: monospace;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.xButton{
+    color: red;
+    border: 0px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.xButton:hover{
+    background-color:rgb(127, 255, 92);  
+}
+
+.img{
+        border-radius: 50%;
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+        /* border-radius: 5px; */
+
+}
