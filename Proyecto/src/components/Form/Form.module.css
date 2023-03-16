@@ -28,7 +28,7 @@
         z-index: 1;
         color: white;
         font-weight: bold;
-        font-family: psychedelic;
+        font-family: psychedelic, sans-serif;
         letter-spacing: 3px;
         font-size: 4.5em;
             /* color: transparent; */

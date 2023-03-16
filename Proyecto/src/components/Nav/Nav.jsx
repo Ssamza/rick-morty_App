@@ -13,15 +13,26 @@ const Nav = (props) => {
     <div>
       <SearchBar onSearch={props.onSearch} />
       <div className={style.randomContainer}>
-      <div className={style.links}>
-      <NavLink to="/home" style={{ textDecoration: 'none' }} ><button className={style.home}>Home</button></NavLink>
-      <NavLink to="/about" style={{ textDecoration: 'none' }}><button className={style.about}>About</button></NavLink>
-      <NavLink to="/favorites" style={{ textDecoration: 'none' }}><button className={style.favorites}>Favorites</button></NavLink>
-      {/* <NavLink to="/" className={style.form}><span>Form</span></NavLink> */}
+        <div className={style.links}>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <button className={style.sign}>Sign out</button>
+          </NavLink>
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
+            <button className={style.home}>Home</button>
+          </NavLink>
+          <NavLink to="/about" style={{ textDecoration: "none" }}>
+            <button className={style.about}>About</button>
+          </NavLink>
+          <NavLink to="/favorites" style={{ textDecoration: "none" }}>
+            <button className={style.favorites}>Favorites</button>
+          </NavLink>
+          {/* <NavLink to="/" className={style.form}><span>Form</span></NavLink> */}
+        </div>
+        <button className={style.randomButton} onClick={getRandomCharacter}>
+          AddRandom
+        </button>
       </div>
-      <button className={style.randomButton} onClick={getRandomCharacter}>AddRandom</button>
-      </div>
-      </div>
+    </div>
   );
 };
 
