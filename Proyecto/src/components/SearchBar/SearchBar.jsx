@@ -11,14 +11,12 @@ export default function SearchBar({onSearch}) {
 
 
    return (
-      <div className={style.bar}>
+      <div className={style.searchContainer}>
          <input 
          type='search'
          className={style.searchInput}
          onChange={handleChange} />
-      <button className={style.searchButton} onClick={() => onSearch(id)}>
-      Agregar
-      </button>
+      <button className={style.searchButton} onClick={() => onSearch(id)}>Add+</button>
       </div>
    );
 }  

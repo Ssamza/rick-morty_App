@@ -8,6 +8,7 @@ export default function Cards({characters, onClose}) {
       <div className={style.cardsContainer}>
       {characters.map(({id,name,species,gender,image}) => {
          return ( <Card
+         key={id}
          onClose={onClose}
          id = {id}
          name = {name}
