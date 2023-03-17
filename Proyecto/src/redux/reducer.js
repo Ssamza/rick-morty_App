@@ -10,7 +10,7 @@ const rootReducer = (state = initialState, action) => {
     case ADD_FAVORITE:
       return {
         ...state,
-        myFavorites: [...state.allCharacters],
+        myFavorites: [...state.myFavorites, action.payload],
         allCharacters: [...state.allCharacters, action.payload],
       };
     case REMOVE_FAVORITE:
@@ -30,14 +30,16 @@ const rootReducer = (state = initialState, action) => {
       };
     case ORDER:
       const { allCharacters } = state;
+      let sortCharacters = [];
       if (action.payload === "Ascendente") {
-        allCharacters.sort((a, b) => a.id - b.id);
+        sortCharacters = [...allCharacters].sort((a, b) => a.id - b.id);
       } else if (action.payload === "Descendente") {
-        allCharacters.sort((a, b) => b.id - a.id);
+        sortCharacters = [...allCharacters].sort((a, b) => b.id - a.id);
       }
       return {
         ...state,
-        myFavorites: allCharacters,
+
+        myFavorites: sortCharacters,
       };
 
     default:
