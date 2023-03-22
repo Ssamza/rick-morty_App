@@ -10,10 +10,12 @@ const Detail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    const KEY = "7fe437112629.ac565859637cc0900f47";
+    const URL_BASE = "http://localhost:3001/rickandmorty/detail/";
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    // const KEY = "7fe437112629.ac565859637cc0900f47";
+    // ?key=${KEY}
 
-    fetch(`${URL_BASE}/character/${detailId}?key=${KEY}`)
+    fetch(`${URL_BASE}/character/${detailId}`)
       .then((response) => response.json())
       .then((data) => setCharacter(data))
       .catch((error) => console.log(error));
@@ -37,9 +39,9 @@ const Detail = () => {
           </div> */}
             <div className={style.props}>
               <h2>{character.name}</h2>
+              <p>GENDER: {character.gender}</p>
               <p>STATUS: {character.status}</p>
               <p>SPECIES: {character.species}</p>
-              <p>GENDER: {character.gender}</p>
               <p>BIRTHPLACE: {character.origin?.name}</p>
               <p>ID: {character.id}</p>
             </div>
