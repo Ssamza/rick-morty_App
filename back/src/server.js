@@ -1,27 +1,45 @@
-const { _getCharById_ } = require("./controllers/getCharById");
-const { _getCharDetail_ } = require("./controllers/getCharDetail");
-const http = require("http");
-const PORT = 3001;
+require("dotenv").config();
+const express = require("express");
+const router = require("./routes");
+const morgan = require("morgan");
 
-http
-  .createServer((req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+const PORT = process.env.PORT || 3001;
 
-    const { url } = req;
+const server = express();
+server.use(express.json());
+server.use(morgan("dev"));
 
-    if (url.includes("onsearch")) {
-      const id = url.split("/").at(-1);
+server.use("/", router);
 
-      _getCharById_(res, id);
-    }
+server.listen(PORT, () => {
+  console.log(`Server raised in port ${PORT}`);
+});
 
-    if (url.includes("detail")) {
-      const id = url.split("/").at(-1);
+// require("dotenv").config();
+// const { getCharById } = require("./controllers/getCharById");
+// const { getCharDetail } = require("./controllers/getCharDetail");
+// const http = require("http");
+// const PORT = 3001;
 
-      _getCharDetail_(res, id);
-    }
-  })
-  .listen(PORT, "localhost");
+// http
+//   .createServer((req, res) => {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+
+//     const { url } = req;
+
+//     if (url.includes("onsearch")) {
+//       const id = url.split("/").at(-1);
+
+//       getCharById(res, id);
+//     }
+
+//     if (url.includes("detail")) {
+//       const id = url.split("/").at(-1);
+
+//       getCharDetail(res, id);
+//     }
+//   })
+//   .listen(PORT, "localhost");
 
 // const data = require("./utils/data");
 

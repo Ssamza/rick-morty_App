@@ -28,17 +28,15 @@ function App() {
   }, [access, navigate]);
 
   const onSearch = (id) => {
-    const URL_BASE = "http://localhost:3001/rickandmorty/onsearch/";
-    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    // const KEY = "7fe437112629.ac565859637cc0900f47";
+    const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    const KEY = "7fe437112629.ac565859637cc0900f47";
 
     const characterExists = characters.some((char) => char.id === id);
 
     //Event
-    // ?key=${KEY}
 
     if (!characterExists) {
-      fetch(`${URL_BASE}/character/${id}`)
+      fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {

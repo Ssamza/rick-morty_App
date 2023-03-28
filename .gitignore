@@ -10,7 +10,6 @@
 target/
 build/
 node_modules/
-.env
 
 venv/
 vendor/

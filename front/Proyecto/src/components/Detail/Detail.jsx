@@ -10,12 +10,11 @@ const Detail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const URL_BASE = "http://localhost:3001/rickandmorty/detail/";
-    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    // const KEY = "7fe437112629.ac565859637cc0900f47";
-    // ?key=${KEY}
+    // const URL_BASE = "http://localhost:3001/rickandmorty/detail/";
+    const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    const KEY = "7fe437112629.ac565859637cc0900f47";
 
-    fetch(`${URL_BASE}/character/${detailId}`)
+    fetch(`${URL_BASE}/character/${detailId}?key=${KEY}`)
       .then((response) => response.json())
       .then((data) => setCharacter(data))
       .catch((error) => console.log(error));
