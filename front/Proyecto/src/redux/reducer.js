@@ -1,8 +1,17 @@
-import { ADD_FAVORITE, FILTER, REMOVE_FAVORITE, ORDER } from "./action";
+import {
+  ADD_FAVORITE,
+  FILTER,
+  REMOVE_FAVORITE,
+  ORDER,
+  GET_CHARACTER_DETAIL,
+  GET_FAVORITES,
+  CLEAN_DETAIL,
+} from "./action";
 
 const initialState = {
   myFavorites: [],
   allCharacters: [],
+  characterDetail: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -41,6 +50,15 @@ const rootReducer = (state = initialState, action) => {
 
         myFavorites: sortCharacters,
       };
+    case GET_CHARACTER_DETAIL:
+      return {
+        ...state,
+        characterDetail: action.payload,
+      };
+    case CLEAN_DETAIL:
+      return { ...state, characterDetail: {} };
+    case GET_FAVORITES:
+      return { ...state, myFavorites: action.payload };
 
     default:
       return { ...state };

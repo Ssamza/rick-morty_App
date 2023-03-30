@@ -9,7 +9,7 @@ router.get("/onsearch/:id", getCharById);
 
 router.get("/detail/:id", getCharDetail);
 
-router.post("/rickandmorty/favs", (req, res) => {
+router.post("/rickandmorty/fav", (req, res) => {
   favs.push(req.body);
   res.status(200).json({ status: "ok" });
 });
