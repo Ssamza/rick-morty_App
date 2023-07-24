@@ -1,0 +1,23 @@
+.searchContainer {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.searchInput {
+	/* border: 0px; */
+	border-radius: 15px 0px 0px 15px;
+	height: 2em;
+}
+
+.searchButton {
+	font-family: monospace;
+	/* border: 0px; */
+	border-radius: 0px 15px 15px 0px;
+	height: 2em;
+}
+
+.searchButton:hover {
+	background-color: black;
+	color: rgb(127, 255, 92);
+}

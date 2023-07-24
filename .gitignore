@@ -1,25 +1,24 @@
-
-# Archivos de caché de IDEs y editores de texto:
-.idea/
-.classpath
-.project
-.settings/
-.vscode/
-
-# Archivos de construcción y dependencias:
-target/
-build/
-node_modules/
-
-venv/
-vendor/
-
-# Archivos de registro y de depuración:
+# Logs
+logs
 *.log
-*.log.*
-*.stackdump
-*.swp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Archivos de configuración de sistemas operativos:
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

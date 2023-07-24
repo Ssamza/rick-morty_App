@@ -1,0 +1,15 @@
+.App {
+	text-align: center;
+}
+
+.nav {
+	background-image: url('./assets/vecteezy_abstract-psychedelic-retro-wave-background_7190729.jpg');
+	background-position: 1px;
+	background-size: 200px;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+hr {
+	margin-top: 40px;
+}

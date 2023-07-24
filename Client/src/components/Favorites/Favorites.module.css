@@ -1,0 +1,12 @@
+.favoriteCardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+
+.selectorContainer {
+	display: flex;
+	justify-content: center;
+	margin: -18px 0px auto;
+}

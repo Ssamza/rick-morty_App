@@ -1,0 +1,90 @@
+.randomButton {
+	color: black;
+	/* border: none; */
+	height: 2em;
+	border-radius: 15px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: auto;
+}
+
+.randomButton:hover {
+	color: rgb(127, 255, 92);
+	background: black;
+}
+
+.randomContainer {
+	display: flex;
+	justify-content: space-between;
+}
+.sign {
+	position: absolute;
+	top: 4px;
+	left: 20px;
+	text-decoration: none;
+	font-size: 0.85em;
+	font-family: monospace;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+.sign:hover {
+	color: rgb(127, 255, 92);
+	background-color: black;
+	font-weight: bolder;
+}
+
+.home {
+	position: relative;
+	margin-top: -20px;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.2em;
+	font-family: monospace;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+.home:hover {
+	color: rgb(127, 255, 92);
+	background-color: black;
+	font-weight: bolder;
+}
+
+.about {
+	position: relative;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.15em;
+	font-family: monospace;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+.about:hover {
+	color: rgb(127, 255, 92);
+	background-color: black;
+	font-weight: bolder;
+}
+
+.favorites {
+	position: relative;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.15em;
+	font-family: monospace;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+.favorites:hover {
+	color: rgb(127, 255, 92);
+	background-color: black;
+	font-weight: bolder;
+}
